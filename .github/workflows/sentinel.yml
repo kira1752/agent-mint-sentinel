@@ -1,0 +1,27 @@
+name: Sentinel
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Poll sources
+        run: python sentinel.py
+      - name: Commit findings
+        run: |
+          git config user.name "sentinel"
+          git config user.email "sentinel@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "sentinel: update findings"
+          git push
