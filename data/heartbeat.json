@@ -1,10 +1,10 @@
 {
- "last_run_utc": "2026-11-05T13:57:55Z",
+ "last_run_utc": "2026-11-05T21:00:03Z",
  "new_this_run": {
-  "robinhood": 60,
-  "bsc": 40
+  "robinhood": 58,
+  "bsc": 54
  },
- "total_seen": 100,
+ "total_seen": 212,
  "cadence_min": 30,
  "resolution": "batch_poll"
 }
