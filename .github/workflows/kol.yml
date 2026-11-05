@@ -1,8 +1,10 @@
 name: KOL
 
 on:
-  schedule:
-    - cron: '7 */2 * * *'
+  # Schedule REMOVED 2026-11-05: the Kolscan SSE stream delivers 0 events to
+  # GitHub runner IPs (verified twice: 120s and 600s windows, both 0 events,
+  # vs 6 events in 30s from the local VM). Manual dispatch only until a
+  # GH-reachable KOL data source exists.
   workflow_dispatch:
     inputs:
       seconds:
