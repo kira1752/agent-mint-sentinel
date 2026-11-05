@@ -1,4 +1,4 @@
-# Rating kualitas KOL — snapshot 2026-11-05 14:06 WITA
+# Rating kualitas KOL — snapshot 2026-11-05 14:18 WITA
 
 Dasar data: 0 trade stream, 0 KOL aktif teramati, 0 roundtrip tertutup, 0 outcome harga terlacak.
 Skor 0–100 (menyusut ke 50 bila bukti sedikit). Tier 'data kurang' = bukti < 5, JANGAN dipakai.
